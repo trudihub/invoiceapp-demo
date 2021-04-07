@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;600&display=swap');
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan";
+}
+
+body{
+  background: #F8F8FB;
+}
+a{
+  text-decoration: none;
+}
+button{
+  cursor: pointer;
+}
+button:focus{
+  outline: none;
+}
+.goBackBtn{
+  margin: 100px 0 10px 20px;
+  cursor: pointer;
+}
+.goBackBtn a{
+  color: black;
+}
+.overlayWrapper{
+  position: fixed;
+  overflow: scroll;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.overlayWrapper .whiteWrapper{
+  width: 100%;
+  background: white;
+  padding-top: 10px;
+}
+.overlayHeader{
+  margin-left: 5%;
+  font-size: 24px;
+}
+.confirmationOverlay{
+  position: fixed;
+  overflow: scroll;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+.confirmationContainer{
+  background: white;
+  width: 90%;
+  height: 250px;
+  margin-left: 5%;
+  margin-top: 50%;
+  padding: 30px;
+  border-radius: 10px;
+}
+.confirmationContainer h2{
+  margin-bottom: 20px;
+}
+.confirmationContainer p{
+  margin-bottom: 5px;
+}
+.confirmationContainer .confirmButtons{
+  margin-top: 40px;
+  float: right;
+}
+.confirmationContainer .confirmButtons button{
+  width: 100px;
+  height: 50px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+}
+.confirmationContainer .cancelDelete{
+  background: rgba(249, 250, 254, 1);
+  color: rgba(126, 136, 195, 1);
+}
+.confirmationContainer .confirmDelete{
+  background: rgba(236, 87, 87, 1);
+  color: white;
+}
+.confirmationContainer .confirmButtons{
+  margin-top: 40px;
+  float: right;
+}
+
+.darkMode{
+  background: rgb(20, 22, 37);
+  color: white;
+}
+.darkMode .invoiceItem,
+.darkMode .invoicePageHeader,
+.darkMode .invoicePageMain,
+.darkMode .dropdownMenu,
+.darkMode .buttonContainer,
+.darkMode .whiteWrapper,
+.darkMode .invoiceForm,
+.darkMode .confirmationContainer{
+  background: #1E2139;
+}
+.darkMode .filter,
+.darkMode .draftBtn,
+.darkMode .invoiceId,
+.darkMode .dueContainer h3,
+.darkMode .goBackBtn a,
+.darkMode .invoiceForm input{
+  color: white !important;
+}
+.darkMode .invoiceForm input{
+  border: none;
+}
+.darkMode .draftCircle{
+  background: white !important;
+}
+.darkMode .billContainer,
+.darkMode .editBtn,
+.darkMode .invoiceForm input,
+.darkMode .addNewItem,
+.darkMode .cancelButton,
+.darkMode .dropdownMenu,
+.darkMode .discardBtn,
+.darkMode .cancelDelete{
+  background: rgba(37, 41, 69, 1) !important;
+}
+.darkMode .billContainer .totalAmountContainer{
+  background: black !important;
+  color: white !important;
+}
+.footerButton{
+  height: 155px;
+  display: flex;
+  align-items: flex-end;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 10%, rgba(151, 151, 151, 0.8) 50%, white 51%);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+}
+.darkMode .footerButton{
+  height: 75px;
+}
+.darkMode .footerButton .buttonContainer{
+  height: 100%;
+}
+.footerButton .buttonContainer{
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footerButton .cancelButton{
+  background: #F9FAFE;
+  height: 50px;
+  width: 100px;
+  border-radius: 50px;
+  border: none;
+  color: #7E88C3;
+  font-weight: bold;
+}
+.footerButton .saveChanges{
+  background: #7C5DFA;
+  color: white;
+  height: 50px;
+  width: 140px;
+  border: none;
+  border-radius: 50px;
+  margin-left: 10px;
+}
+
+@media(min-width: 768px){
+  .overlayWrapper .whiteWrapper{
+    width: 80%;
+    border-radius: 0 20px 20px 0;
+    padding-top: 10px;
+  }
+  .footerButton{
+    width: 80%;
+  }
+}
+
+@media(min-width:1024px){
+  .confirmationContainer{
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 10%;
+  }
+  .goBackBtn{
+    margin-left: 15%;
+  }
+  .overlayWrapper .whiteWrapper{
+    width: 60%;
+  }
+  .footerButton{
+    width: 60%;
+    z-index: 1;
+  }
+  .overlayHeader{
+    margin-left: 15%;
+  }
+}
